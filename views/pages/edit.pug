@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+	.mt-5
+		if event
+			h1.display-4.mt-5 Edit an Event
+			hr.my-4
+			.form-group
+				label(for="name") Name
+				input#name.form-control(type="text", name="name" value=event.name)
+			.form-group
+				label(for="description") Description
+				textarea#description.form-control(name="description")= event.description
+			input(type="hidden" id="slug" value=event.slug)
+			input.btn.btn-primary.btn-lg(type="button" value="Edit" onclick='editEvent()')
+		else
+			.jumbotron.jumbotron-fluid
+				.container
+					h1.display-4 Edit Error
+					p.lead
+						| Please go to Home page and choose an Event you`d like to edit.
+		
+		script(src="/js/edit.js")
+		script(src="https://unpkg.com/axios/dist/axios.min.js")

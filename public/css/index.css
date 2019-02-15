@@ -1,0 +1,25 @@
+body {
+    height: 100vh;
+    background-color: #ccc;
+}
+
+footer {
+    padding: 15px 0;
+    border-top: 1px solid #8c8c8c;
+}
+
+.card {
+    margin: 15px 0;
+    transition-duration: 0.3s;
+    box-shadow: 5px 5px 10px #8282829c;
+}
+
+.card:hover {
+    transform: scale(1.04, 1.04);
+    box-shadow: 25px 25px 25px #8282829c;
+}
+
+.display-1 a {
+    color: black;
+    text-decoration: none;
+}

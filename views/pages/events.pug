@@ -1,0 +1,14 @@
+extends ../layout
+
+block content
+	.d-flex.justify-content-around.align-items-center.flex-wrap.mt-5
+		if events && events.length > 0
+			each event in events
+				.card(style="width: 18rem;")
+						img.card-img-top(src="img/rings.jpg" alt="Card image cap")
+						.card-body
+							h5.card-title= event.name
+							p.card-text= event.description
+							a.btn.btn-primary(href=`/${event.slug}`) Details
+		else
+			h1.display-4.mt-5 No Events added yet.

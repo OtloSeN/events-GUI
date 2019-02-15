@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+    h1.display-4.mt-5 Create an Event
+    hr.my-4
+    .form-group
+        label(for="name") Name
+        input#name.form-control(type="text", name="name")
+    .form-group
+        label(for="description") Description
+        textarea#description.form-control(name="description")
+    input.btn.btn-primary(type="button", value="Create" onclick='create()')
+    
+    script(src="/js/create.js")
+    script(src="https://unpkg.com/axios/dist/axios.min.js")
